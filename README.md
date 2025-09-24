@@ -1,1 +1,0 @@
-# Abbaskhan-DIP-DBMS-week1
