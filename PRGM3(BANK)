@@ -1,0 +1,39 @@
+show databases;
+create database bank;
+use bank;
+show tables;
+
+create table Branch (
+BRANCHNAME varchar(50) primary key,
+BRANCHCITY VARCHAR(20) ,
+ASSESTS INT
+);
+desc Branch;
+
+create table Loan (
+LOANNUMBER INT PRIMARY key,
+BRANCHNAME VARCHAR(50),
+AMOUNT INT,
+foreign key(BRANCHNAME) references Branch(BRANCHNAME));
+DESC Loan;
+
+CREATE TABLE BankAccount (
+ACCNO INT PRIMARY KEY,
+BRANCHNAME VARCHAR(50),
+BALANCE INT,
+foreign key(BRANCHNAME) references Branch(BRANCHNAME));
+DESC BankAccount;
+
+CREATE TABLE BankCustomer(
+CUSTOMERNAMAE VARCHAR(50) PRIMARY KEY,
+CUSTOMERSTREET VARCHAR(50) ,
+CUSTOMERCITY VARCHAR(50));
+DESC BankCustomer;
+
+CREATE TABLE Depositer(
+CUSTOMERNAME VARCHAR(50) PRIMARY KEY,
+ACCNO INT ,
+foreign key(CUSTOMERNAME) references BankCustomer(CUSTOMERNAME),
+foreign key(ACCNO) references BankAccount(ACCNO));
+DESC Depositer;
+
