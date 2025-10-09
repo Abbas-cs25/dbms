@@ -66,3 +66,21 @@ insert into BankAccount values
 (11,'SBI_Jantarmantar',2000);
 select * from BankAccount;
 
+insert into Bankcustomer values
+('Avinash','Bull_Temple_Road','Bangalore'),
+('Dinesh','Bannergatta_Road','Bangalore'),
+('Mohan','NationalCollage_Road','Bangalore'),
+('Nikki','Akbar_Road','Delhi'),
+('Ravi','Prithviraj_Road','Delhi');
+select * from bankcustomer;
+
+insert into depositer values
+('Avinash',1),
+('Dinesh',2),
+('Nikki',4),
+('Ravi',5),
+('Avinash',8),
+('Nikki',9),
+('Dinesh',10),
+('Nikki',11);
+select * from DEPOSITER;
