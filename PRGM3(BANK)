@@ -31,7 +31,7 @@ CUSTOMERCITY VARCHAR(50));
 DESC BankCustomer;
 
 CREATE TABLE Depositer(
-CUSTOMERNAME VARCHAR(50) PRIMARY KEY,
+CUSTOMERNAME VARCHAR(50),
 ACCNO INT ,
 foreign key(CUSTOMERNAME) references BankCustomer(CUSTOMERNAME),
 foreign key(ACCNO) references BankAccount(ACCNO));
