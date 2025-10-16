@@ -6,21 +6,21 @@ show tables;
 create table Branch (
 BRANCHNAME varchar(50) primary key,
 BRANCHCITY VARCHAR(20) ,
-ASSESTS INT
+ASSESTS real
 );
 desc Branch;
 
 create table Loan (
 LOANNUMBER INT PRIMARY key,
 BRANCHNAME VARCHAR(50),
-AMOUNT INT,
+AMOUNT real,
 foreign key(BRANCHNAME) references Branch(BRANCHNAME));
 DESC Loan;
 
 CREATE TABLE BankAccount (
 ACCNO INT PRIMARY KEY,
 BRANCHNAME VARCHAR(50),
-BALANCE INT,
+BALANCE real,
 foreign key(BRANCHNAME) references Branch(BRANCHNAME));
 DESC BankAccount;
 
@@ -32,7 +32,7 @@ DESC BankCustomer;
 
 CREATE TABLE Depositer(
 CUSTOMERNAME VARCHAR(50),
-ACCNO INT ,
+ACCNO real,
 foreign key(CUSTOMERNAME) references BankCustomer(CUSTOMERNAME),
 foreign key(ACCNO) references BankAccount(ACCNO));
 DESC Depositer;
