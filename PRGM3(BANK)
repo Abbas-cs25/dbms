@@ -6,7 +6,7 @@ show tables;
 create table Branch (
 BRANCHNAME varchar(50) primary key,
 BRANCHCITY VARCHAR(20) ,
-ASSESTS real
+ASSETS real
 );
 desc Branch;
 
@@ -84,3 +84,9 @@ insert into depositer values
 ('Dinesh',10),
 ('Nikki',11);
 select * from DEPOSITER;
+
+
+SELECT BRANCHNAME, ASSETS/100000 AS 'ASSETS IN LAKH' FROM BRANCH;
+
+
+
