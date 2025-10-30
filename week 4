@@ -27,5 +27,24 @@ WHERE C.customername IN (
 group by C.customername;
 
 
+select branchname from branch 
+where branchcity = "bangalore"
+order by assets desc;
+
+
+
+DELETE FROM BankAccount
+WHERE branch_name IN (
+    SELECT branch_name 
+    FROM Branch 
+    WHERE branch_city = 'Bombay'
+);
+
+
+
+UPDATE BankAccount
+SET balance = balance * 1.05;
+
+
 
 
