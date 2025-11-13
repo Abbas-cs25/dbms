@@ -13,6 +13,15 @@ CREATE TABLE Parts (
     color VARCHAR(20)
 );
 
+CREATE TABLE Catalog (
+    sid INT,
+    pid INT,
+    cost DECIMAL(10,2),
+    PRIMARY KEY (sid, pid),
+    FOREIGN KEY (sid) REFERENCES Supplier(sid),
+    FOREIGN KEY (pid) REFERENCES Parts(pid)
+);
+
 
 INSERT INTO Supplier VALUES
 (1, 'Acme Widget Suppliers', 'New York'),
